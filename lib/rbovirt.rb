@@ -181,7 +181,7 @@ module OVIRT
     end
 
     def handle_success(response)
-      puts "#{res}\n" if ENV['RBOVIRT_LOG_RESPONSE']
+      puts "#{response}\n" if ENV['RBOVIRT_LOG_RESPONSE']
       @jsessionid ||= response.headers[:jsessionid]
       Nokogiri::XML(response)
     end
